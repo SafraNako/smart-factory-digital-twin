@@ -1,0 +1,34 @@
+{
+  "istasyonlar": [
+    {
+      "ad": "Pres",
+      "sure": 1.0,
+      "dagilim": "exp",
+      "mtbf": 120.0,
+      "mttr": 8.0,
+      "fire": 0.0
+    },
+    {
+      "ad": "Kaynak",
+      "sure": 1.2,
+      "dagilim": "exp",
+      "mtbf": 90.0,
+      "mttr": 10.0,
+      "fire": 0.0
+    },
+    {
+      "ad": "Boya",
+      "sure": 0.9,
+      "dagilim": "exp",
+      "mtbf": 200.0,
+      "mttr": 15.0,
+      "fire": 0.0
+    }
+  ],
+  "tamponlar": [
+    4,
+    4
+  ],
+  "varis_hizi": null,
+  "bekleme_kapasitesi": null
+}

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-factory-digital-twin"
+version = "0.1.0"
+description = "Digital twin of a single machine and of a production line fed by simulated sensor data: Kalman-filter state and wear estimation, CUSUM monitoring, remaining-useful-life prediction, and a discrete-event line model with an exact Markov-chain solver and log-based calibration, each cross-checked against an analytic or independent result"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "SafraNako" }]
+dependencies = [
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.scripts]
+fabrika = "fabrika_ikizi.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+filterwarnings = ["ignore::DeprecationWarning:matplotlib"]
